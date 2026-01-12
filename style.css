@@ -1,0 +1,120 @@
+/* إعدادات الصفحة العامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* القائمة العلوية */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #6c63ff; /* اللون الموف */
+    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.search-bar input {
+    padding: 5px 10px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+}
+
+/* القسم الرئيسي (الصورة الخلفية) */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1557683316-973673baf926'); /* صورة افتراضية مشابهة */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* طبقة شفافة فوق الصورة لجعل النص واضحاً */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* محتوى النص */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.hero-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* الأزرار */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn-white {
+    background: white;
+    color: #333;
+}
+
+.btn-purple {
+    background: #6c63ff;
+    color: white;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* تنسيق للموبايل */
+@media (max-width: 768px) {
+    .nav-links { display: none; } /* إخفاء الروابط في الشاشات الصغيرة للتبسيط */
+    .hero-content h1 { font-size: 30px; }
+}
